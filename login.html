@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/SignUp</title>
+    <link rel="stylesheet" href="style2.css">
+    <script language="JavaScript" type="text/javascript">
+        function validate(){
+        if (document.form1.enterroll.value.length < 8){
+            alert("Enter Correct Roll Number")
+            return false;
+        }
+        if (document.form1.entername.value.length < 5){
+            alert("Enter Full Username")
+            return false;
+        }
+        if(document.form1.enterpassword.value.length <4){
+            alert("password length should be greater than 4")
+            return false;
+        }
+        else{
+            alert("Login Successful")
+            return false;
+            
+        }
+        return true;
+        }
+        </script>
+</head>
+<body>
+    <div class="header">
+        <nav>
+            <a href="inex.html"><img src="logopr.png" alt=""></a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+
+                    <li><a href="course.html">OUR PROGRAMS</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                    <li><a href="7st reg.html">REGISTER NOW </a></li>
+                    <li><a href="about.html">ABOUT </a></li>
+                </ul>
+            </div>
+        </nav>
+    <form name ="form1" class="box" action="index.html" method="post" onsubmit="return validate();">
+
+        <h1>
+            Login
+        </h1>
+     <input type="number" name="enterroll" placeholder="Enter University Roll No." id="username">
+    <input type="text" name="entername" placeholder="Enter Full Name" id="username">
+    <input type="password" name="enterpassword" placeholder="Enter Password" id="password">
+    <input type="submit" name="" value="Login" onclick="validate()">
+    </form>
+</body>
+</html>
